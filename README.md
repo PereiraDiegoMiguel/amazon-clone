@@ -6,7 +6,10 @@ In the project directory, you can run:
 
 ## Dependecies
 
--react-router-dom
+- react-router-dom
+- npm install @material-ui/core
+- npm install @material-ui/icons
+
 
 ### `npm start`
 
