@@ -21,7 +21,7 @@ function Home() {
         />
 
         <Product
-          id="1234"
+          id="12345"
           title="The Lean Startup"
           price={11.90}
           rating={5}
@@ -33,7 +33,7 @@ function Home() {
       <div className="home__row">
 
         <Product
-          id="1234"
+          id="12346"
           title="The Lean Startup"
           price={11.90}
           rating={5}
@@ -41,7 +41,7 @@ function Home() {
         />
 
         <Product
-          id="1234"
+          id="12347"
           title="The Lean Startup"
           price={11.90}
           rating={5}
@@ -49,7 +49,7 @@ function Home() {
         />
 
         <Product
-          id="1234"
+          id="12348"
           title="The Lean Startup"
           price={11.90}
           rating={5}
@@ -60,7 +60,7 @@ function Home() {
 
       <div className="home__row">
         <Product
-          id="1234"
+          id="12349"
           title="The Lean Startup"
           price={11.90}
           rating={5}
