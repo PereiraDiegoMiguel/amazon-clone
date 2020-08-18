@@ -9,6 +9,7 @@ In the project directory, you can run:
 - react-router-dom
 - npm install @material-ui/core
 - npm install @material-ui/icons
+- npm i react-currency-format
 
 
 ### `npm start`

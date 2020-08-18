@@ -36,7 +36,7 @@ function Home() {
           id="12346"
           title="New Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage,
           2.6GHz Intel Core i7) - Space Gray"
-          price={2.099}
+          price={2099}
           rating={5}
           image="https://m.media-amazon.com/images/I/71pC69I3lzL._AC_UY218_.jpg"
         />

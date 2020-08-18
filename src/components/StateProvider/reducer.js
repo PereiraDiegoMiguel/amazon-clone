@@ -1,25 +1,15 @@
 export const initialState = {
-  basket: [
-    {
-      id: "1234",
-      title: "The Lean Startup",
-      price: 11.90,
-      rating: 5,
-      image: "https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg",
-    },
-    {
-      id: "655",
-      title: "nuber 2",
-      price: 13.90,
-      rating: 4,
-      image: "https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg",
-    },
-  ],
+  basket: [],
   user: null,
 };
 
+export const getBasketTotal = (basket) =>
+  basket?.reduce((amount, item) => item.price + amount, 0);
+
+
+
 const reducer = (state, action) => {
-  console.log(action);
+
   switch (action.type) {
 
     case 'ADD_TO_BASKET':
