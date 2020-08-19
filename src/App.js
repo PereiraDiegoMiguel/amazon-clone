@@ -11,7 +11,7 @@ import { auth } from './firebase/firebase';
 function App() {
 
 
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -34,7 +34,10 @@ function App() {
 
     }
 
-  }, [dispatch]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  console.log('User is-->', user);
 
   return (
 
