@@ -5,16 +5,36 @@ import './App.css';
 import Home from './components/Home/Home';
 import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
-import useStateValue from './components/StateProvider/StateProvider'
+import { useStateValue } from './components/StateProvider/StateProvider'
 import { auth } from './firebase/firebase';
 
 function App() {
 
+
   const [{ basket }, dispatch] = useStateValue();
 
   useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
 
-  }, []);
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+
+    return () => {
+      unsubscribe();
+
+    }
+
+  }, [dispatch]);
 
   return (
 
