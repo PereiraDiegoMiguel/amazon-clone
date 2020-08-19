@@ -6,7 +6,7 @@ import "./styles.css"
 
 function CheckoutProduct({ id, title, image, price, rating }) {
 
-  const [{ basket }, dispatch] = useStateValue();
+  const [ dispatch] = useStateValue();
 
 
   const removeFromBasket = () => {
@@ -37,6 +37,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 
         <div className="product__rating">
           {
+            // eslint-disable-next-line no-array-constructor
             Array(id, rating).fill()
               .map((stars) => (
 

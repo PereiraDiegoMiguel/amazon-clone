@@ -7,7 +7,7 @@ import { getBasketTotal } from '../StateProvider/reducer';
 
 
 function Subtotal() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
   const subtotal = basket.length;
 
 

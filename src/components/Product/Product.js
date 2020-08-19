@@ -5,8 +5,7 @@ import './styles.css';
 
 function Product({ id, title, image, price, rating }) {
 
-  const [{ basket }, dispatch] = useStateValue();
-  const key = basket.id;
+  const [ dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
@@ -36,7 +35,7 @@ function Product({ id, title, image, price, rating }) {
         <div className="product__rating">
           {
             Array(rating).fill()
-              .map((stars, index) => (
+              .map((index) => (
                 <p key={index}><StarIcon className="product__star" /></p>
               ))
           }
@@ -44,7 +43,7 @@ function Product({ id, title, image, price, rating }) {
 
       </div>
 
-      <img src={image} alt="Image" />
+      <img src={image} alt="ImageLost" />
 
       <button onClick={addToBasket}>Add to basket</button>
 

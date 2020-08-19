@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import { auth } from '../../firebase/firebase';
-import firebase from 'firebase';
-
 
 function Login() {
 
@@ -11,12 +9,13 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const loginUser = async (event) => {
-    //event.preventDefaut();
+  const loginUser = async event => {
+    event.preventDefaut();
+
     await auth.signInWithEmailAndPassword(email, password)
       .then(auth => {
         history.push("/")
-      }).catch((e) => alert(e.message));
+      }).catch(e => alert(e.message));
   };
 
   const register = (event) => {
@@ -46,14 +45,14 @@ function Login() {
           <input
             type="email"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={event => setEmail(event.target.value)}
           />
 
           <h5>Password</h5>
           <input
             type="password"
             value={password}
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={event => setPassword(event.target.value)}
           />
 
           <button
