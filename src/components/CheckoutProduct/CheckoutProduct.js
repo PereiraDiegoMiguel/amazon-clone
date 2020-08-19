@@ -1,24 +1,20 @@
 import React from 'react';
 import StarIcon from '@material-ui/icons/Star';
 import { useStateValue } from '../StateProvider/StateProvider';
-
 import "./styles.css"
 
 function CheckoutProduct({ id, title, image, price, rating }) {
 
-  const [ dispatch] = useStateValue();
-
+  const [dispatch] = useStateValue();
 
   const removeFromBasket = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",
       id: id,
-    })
-
+    });
   }
 
   return (
-
     <div className="checkoutProduct">
       <img
         className="checkoutProduct__image"
@@ -40,7 +36,6 @@ function CheckoutProduct({ id, title, image, price, rating }) {
             // eslint-disable-next-line no-array-constructor
             Array(id, rating).fill()
               .map((stars) => (
-
                 <p ><StarIcon className="product__star" /></p>
               ))
           }
