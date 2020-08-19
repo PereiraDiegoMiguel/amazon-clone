@@ -6,7 +6,8 @@ import "./styles.css"
 
 function CheckoutProduct({ id, title, image, price, rating }) {
 
-  const [{ basket }, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   const removeFromBasket = () => {
     dispatch({

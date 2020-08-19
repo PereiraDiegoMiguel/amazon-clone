@@ -8,6 +8,7 @@ import CurrencyFormat from 'react-currency-format';
 
 function Checkout() {
   const [{ basket }] = useStateValue();
+  const count = basket.length
 
   return (
     <div className="checkout">
@@ -34,8 +35,9 @@ function Checkout() {
                 Your Shopping Basket
               </h2>
 
+
               {basket?.map((item) => (
-                <CheckoutProduct key={item.id}
+                <CheckoutProduct key={count}
                   id={item.id}
                   title={item.title}
                   image={item.image}

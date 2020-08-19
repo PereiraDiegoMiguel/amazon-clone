@@ -2,13 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search, ShoppingBasket } from '@material-ui/icons';
 import { useStateValue } from '../StateProvider/StateProvider';
-
 import './styles.css';
 
 function Header() {
 
   const [{ basket }] = useStateValue();
-  console.log(basket);
 
   return (
     <nav className="header">

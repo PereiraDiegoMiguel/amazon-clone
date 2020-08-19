@@ -1,9 +1,11 @@
 import React from 'react';
-import './styles.css';
 import Product from '../Product/Product';
+import './styles.css';
 
 function Home() {
+
   return (
+
     <div className="home">
       <img
         className="home__image"
@@ -16,7 +18,7 @@ function Home() {
           id="1234"
           title="The Lean Startup"
           price={11.90}
-          rating={5}
+          rating={3}
           image="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
         />
 
@@ -24,7 +26,7 @@ function Home() {
           id="12345"
           title="Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Gray (Latest Model)"
           price={329.99}
-          rating={5}
+          rating={4}
           image="https://m.media-amazon.com/images/I/6162WMQWhVL._AC_UY218_.jpg"
         />
 
@@ -67,7 +69,7 @@ function Home() {
           id="12349"
           title="The Lean Samsung Galaxy Watch (46mm) SM-R800NZSAXAR (Bluetooth) - Silver (Renewed)"
           price={198.00}
-          rating={5}
+          rating={4}
           image="https://m.media-amazon.com/images/I/81OIphx344L._AC_UL320_.jpg"
         />
       </div>
