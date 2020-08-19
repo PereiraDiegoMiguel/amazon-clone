@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import './App.css';
 import Home from './components/Home/Home';
 import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
-
+import useStateValue from './components/StateProvider/StateProvider'
+import { auth } from './firebase/firebase';
 
 function App() {
+
+  const [{ basket }, dispatch] = useStateValue();
+
+  useEffect(() => {
+
+  }, []);
+
   return (
 
     <Router>

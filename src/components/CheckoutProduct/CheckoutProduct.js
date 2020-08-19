@@ -6,8 +6,8 @@ import "./styles.css"
 
 function CheckoutProduct({ id, title, image, price, rating }) {
 
-  const [dispatch] = useStateValue();
-  const [{ basket }] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
+
 
   const removeFromBasket = () => {
     dispatch({
@@ -23,7 +23,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
       <img
         className="checkoutProduct__image"
         src={image}
-        alt="Image"
+        alt="ImageLost"
       />
 
       <div className="checkoutProduct__info">

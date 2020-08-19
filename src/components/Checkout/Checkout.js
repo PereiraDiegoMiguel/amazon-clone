@@ -3,7 +3,7 @@ import { useStateValue } from '../StateProvider/StateProvider';
 import './styles.css';
 import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
 import Subtotal from '../Subtotal/Subtotal';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 
 
 function Checkout() {
@@ -16,7 +16,7 @@ function Checkout() {
         <img
           className="checkout__ad"
           src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/AmazonPay/LPAOffers/April/Prime/Store/V2/LPA501_1500x250.jpg"
-          alt="image"
+          alt="imageLost"
         />
 
         {basket?.length === 0 ? (
